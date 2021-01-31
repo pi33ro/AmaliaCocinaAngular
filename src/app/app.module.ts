@@ -29,6 +29,9 @@ import { EditarOrdenComponent } from './orden/editar-orden/editar-orden.componen
 import { PedidoDetalleComponent } from './pedido-detalle/pedido-detalle.component';
 import { NuevoPedidoDetalleComponent } from './pedido-detalle/nuevo-pedido-detalle/nuevo-pedido-detalle.component';
 import { EditarPedidoDetalleComponent } from './pedido-detalle/editar-pedido-detalle/editar-pedido-detalle.component';
+import { DocumentoVentaComponent } from './documento-venta/documento-venta.component';
+import { NuevoDocumentoVentaComponent } from './documento-venta/nuevo-documento-venta/nuevo-documento-venta.component';
+import { EditarDocumentoVentaComponent } from './documento-venta/editar-documento-venta/editar-documento-venta.component';
 
 const routers:Routes=[
   { path:'',redirectTo:'/principal/login',pathMatch:'full'},
@@ -69,6 +72,11 @@ const routers:Routes=[
   { path: 'principal/pedidoDetalle/nuevo', component:NuevoPedidoDetalleComponent},
   { path: 'principal/pedidoDetalle/editar', component:EditarPedidoDetalleComponent},
   { path: 'principal/pedidoDetalle/editar/:id', component:EditarPedidoDetalleComponent},
+
+  { path: 'principal/documentoVenta', component:DocumentoVentaComponent},
+  { path: 'principal/documentoVenta/nuevo', component:NuevoDocumentoVentaComponent},
+  { path: 'principal/documentoVenta/editar', component:EditarDocumentoVentaComponent},
+  { path: 'principal/documentoVenta/editar/:id', component:EditarDocumentoVentaComponent},
   
 
 ]
@@ -98,7 +106,10 @@ const routers:Routes=[
     EditarOrdenComponent,
     PedidoDetalleComponent,
     NuevoPedidoDetalleComponent,
-    EditarPedidoDetalleComponent
+    EditarPedidoDetalleComponent,
+    DocumentoVentaComponent,
+    NuevoDocumentoVentaComponent,
+    EditarDocumentoVentaComponent
   ],
   imports: [
     BrowserModule,

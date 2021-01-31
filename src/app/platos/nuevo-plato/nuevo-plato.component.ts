@@ -14,8 +14,8 @@ export class NuevoPlatoComponent implements OnInit {
   titulo:string="Registro de Platos";
 
   constructor(private platoServicio:PlatoService, 
-    private router:Router, 
-    private activatedRoute:ActivatedRoute) { }
+              private router:Router, 
+              private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
   }

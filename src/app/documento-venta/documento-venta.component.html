@@ -1,0 +1,38 @@
+<div class="container">
+    
+    <br>
+    <boton type="button" name="botton" class="btn btn-info" [routerLink]="['/principal']">PRINCIPAL</boton>
+    <hr>
+    <button class="btn btn-info" type="button" [routerLink]="['/principal/documentoVenta/nuevo']">Nuevo Documento de Venta</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">ID PEDIDO</th>
+            <th scope="col">ID ORDEN</th>
+            <th scope="col">TIPO DOCUMENTO VENTA</th>
+            <th scope="col">SUBTOTAL</th>
+            <th scope="col">IGV</th>
+            <th scope="col">PRECIO PRODUCTO</th>
+            <th scope="col">TOTAL</th>
+            <th scope="col">OBSERVACION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let documentoVenta of documentoVenta">
+            <th scope="row">{{documentoVenta.id_docventa}}</th>
+            <td>{{documentoVenta.idpedido}}</td>
+            <td>{{documentoVenta.id_orden}}</td>
+            <td>{{documentoVenta.tipo_doc_venta}}</td>
+            <td>{{documentoVenta.subtotal}}</td>
+            <td>{{documentoVenta.igv}}</td>
+            <td>{{documentoVenta.precio_producto}}</td>
+            <td>{{documentoVenta.total}}</td>
+            <td>{{documentoVenta.observacion}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/principal/documentoVenta/editar', documentoVenta.id_docventa]">Editar</button>  </td>
+            <td><button  class="btn btn-danger" (click)="delete(documentoVenta)" >Eliminar</button>  </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
