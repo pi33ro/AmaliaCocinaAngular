@@ -1,0 +1,63 @@
+<div class="container">
+    <button class="btn btn-dark" type="button" [routerLink]="['/principal/plato']">REGRESAR AL LISTADO</button>
+        <div class="card-body">
+            <h5 class="card-title">{{titulo}}</h5>
+            <form>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Id Plato</label>
+                    <div class="col-sm-6">
+                        <input type="text" readonly=»readonly class="form-control" name="id_plato" [(ngModel)]="plato.id_plato">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Id Categoria</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="id_categoria" [(ngModel)]="plato.id_categoria">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="nombre" [(ngModel)]="plato.nombre">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Precio</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="precio" [(ngModel)]="plato.precio">
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Descripcion</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="descripcion" [(ngModel)]="plato.descripcion">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Stock</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="stock" [(ngModel)]="plato.stock">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Imagen</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="imagen" [(ngModel)]="plato.imagen">
+                    </div>
+                </div>
+
+   
+                <button class="btn btn-success" role="button" (click)='update()'>Actualizar</button>
+
+            </form>
+        </div>
+    
+    </div>
+

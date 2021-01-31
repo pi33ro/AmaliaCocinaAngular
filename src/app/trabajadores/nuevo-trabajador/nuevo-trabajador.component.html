@@ -1,0 +1,48 @@
+<div class="container">
+    <button class="btn btn-dark" type="button" [routerLink]="['/principal/trabajador']">REGRESAR AL LISTADO</button>
+        <div class="card-body">
+            <h5 class="card-title">{{titulo}}</h5>
+            <form>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Id Trabajador</label>
+                    <div class="col-sm-6">
+                        <input type="text" readonly=»readonly class="form-control" name="id_trabajador" [(ngModel)]="trabajador.id_trabajador">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="nombre" [(ngModel)]="trabajador.nombre">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Apellido</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="apellido" [(ngModel)]="trabajador.apellido">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">Telefono</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="telefono" [(ngModel)]="trabajador.telefono">
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    <label for="nombre" class="col-form-label col-sm-2">DNI</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="dni" [(ngModel)]="trabajador.dni">
+                    </div>
+                </div>
+
+   
+                <button class="btn btn-success" role="button" (click)='create()' >Registrar</button>
+
+            </form>
+        </div>
+    
+    </div>

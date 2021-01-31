@@ -1,0 +1,30 @@
+<div class="container">
+    
+    <br>
+    <boton type="button" name="botton" class="btn btn-info" [routerLink]="['/principal']">PRINCIPAL</boton>
+    <hr>
+    <button class="btn btn-info" type="button" [routerLink]="['/principal/trabajador/nuevo']">Nuevo Trabajador</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">APELLIDO</th>
+            <th scope="col">TELEFONO</th>
+            <th scope="col">DNI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let trabajador of trabajador">
+            <th scope="row">{{trabajador.id_trabajador}}</th>
+            <td>{{trabajador.nombre}}</td>
+            <td>{{trabajador.apellido}}</td>
+            <td>{{trabajador.telefono}}</td>
+            <td>{{trabajador.dni}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/principal/trabajador/editar', trabajador.id_trabajador]">Editar</button>  </td>
+            <td><button  class="btn btn-danger" (click)="delete(trabajador)" >Eliminar</button>  </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

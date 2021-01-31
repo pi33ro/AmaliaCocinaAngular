@@ -1,0 +1,24 @@
+<div class="container">
+    
+    <br>
+    <boton type="button" name="botton" class="btn btn-info" [routerLink]="['/principal']">PRINCIPAL</boton>
+    <hr>
+    <button class="btn btn-info" type="button" [routerLink]="['/principal/orden/nuevo']">Nueva Orden</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">ID PLATO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let orden of orden">
+            <th scope="row">{{orden.id_orden}}</th>
+            <td>{{orden.id_plato}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/principal/orden/editar', orden.id_orden]">Editar</button>  </td>
+            <td><button  class="btn btn-danger" (click)="delete(orden)" >Eliminar</button>  </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

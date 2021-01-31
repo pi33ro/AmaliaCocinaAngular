@@ -1,0 +1,36 @@
+<div class="container">
+    
+    <br>
+    <boton type="button" name="botton" class="btn btn-info" [routerLink]="['/principal']">PRINCIPAL</boton>
+    <hr>
+    <button class="btn btn-info" type="button" [routerLink]="['/principal/pedido/nuevo']">Nuevo Pedido</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">ID CLIENTE</th>
+            <th scope="col">ID TRABAJADOR</th>
+            <th scope="col">TIPO PAGO</th>
+            <th scope="col">FECHA PEDIDO</th>
+            <th scope="col">FECHA ENTREGA</th>
+            <th scope="col">ESTADO</th>
+            <th scope="col">VOUCHER</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedido of pedido">
+            <th scope="row">{{pedido.id_pedido}}</th>
+            <td>{{pedido.idcliente}}</td>
+            <td>{{pedido.idtrabajador}}</td>
+            <td>{{pedido.tipo_pago}}</td>
+            <td>{{pedido.fecha_pedido}}</td>
+            <td>{{pedido.fecha_entrega}}</td>
+            <td>{{pedido.estado}}</td>
+            <td>{{pedido.voucher}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/principal/pedido/editar', pedido.id_pedido]">Editar</button>  </td>
+            <td><button  class="btn btn-danger" (click)="delete(pedido)" >Eliminar</button>  </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    
+    <br>
+    <boton type="button" name="botton" class="btn btn-info" [routerLink]="['/principal']">PRINCIPAL</boton>
+    <hr>
+    <button class="btn btn-info" type="button" [routerLink]="['/principal/pedidoDetalle/nuevo']">Nuevo Pedido Detalle</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">ID PEDIDO</th>
+            <th scope="col">ID ORDEN</th>
+            <th scope="col">CANTIDAD</th>
+            <th scope="col">PRECIO VENTA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedidoDetalle of pedidoDetalle">
+            <th scope="row">{{pedidoDetalle.id_ped_detalle}}</th>
+            <td>{{pedidoDetalle.id_pedido}}</td>
+            <td>{{pedidoDetalle.id_orden}}</td>
+            <td>{{pedidoDetalle.cantidad}}</td>
+            <td>{{pedidoDetalle.precio_venta}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/principal/pedidoDetalle/editar', pedidoDetalle.id_ped_detalle]">Editar</button>  </td>
+            <td><button  class="btn btn-danger" (click)="delete(pedidoDetalle)" >Eliminar</button>  </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

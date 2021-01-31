@@ -1,0 +1,30 @@
+<div class="container">
+    
+    <br>
+    <boton type="button" name="botton" class="btn btn-info" [routerLink]="['/principal']">PRINCIPAL</boton>
+    <hr>
+    <button class="btn btn-info" type="button" [routerLink]="['/principal/users/nuevo']">Nuevo Usuario</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">IDTRABAJADOR</th>
+            <th scope="col">USERNAME</th>
+            <th scope="col">PASSWORD</th>
+            <th scope="col">ENABLED</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let users of users">
+            <th scope="row">{{users.id}}</th>
+            <td>{{users.trabajador_id}}</td>
+            <td>{{users.username}}</td>
+            <td>{{users.password}}</td>
+            <td>{{users.enabled}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/principal/users/editar', users.id]">Editar</button>  </td>
+            <td><button  class="btn btn-danger" (click)="delete(users)" >Eliminar</button>  </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
